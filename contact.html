@@ -3,20 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home - Restaurant</title>
+        <title>Great NY Noodletown</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="content-wrapper">
             <nav>
                 <img src="resources\icon.png" alt="Hamburger Logo">
-                <div>
+                <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="menu.html">Menu</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                 </div>
-                <div>
+                <div class="nav-button">
+                    <button>Order Now</button>
+                </div>
+                <div class="hamburger" onclick="toggleMobileNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="mobile-nav" id="mobileNav">
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
                     <button>Order Now</button>
                 </div>
             </nav>
@@ -55,5 +67,14 @@
                 </div>
             </div>
         </footer>
+        <script>
+            function toggleMobileNav() {
+                const mobileNav = document.getElementById('mobileNav');
+                const hamburger = document.querySelector('.hamburger');
+                
+                mobileNav.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            }
+        </script>
     </body>
 </html>
