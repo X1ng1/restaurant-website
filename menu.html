@@ -18,6 +18,9 @@
                 </div>
                 <div class="nav-button">
                     <button>Order Now</button>
+                    <button id="cart-toggle" class="cart-btn" onclick="toggleCart()">
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
                 </div>
                 <div class="hamburger" onclick="toggleMobileNav()">
                     <span></span>
@@ -30,6 +33,9 @@
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
                     <button>Order Now</button>
+                    <button id="mobile-cart-toggle" class="cart-btn" onclick="toggleCart(); toggleMobileNav();">
+                        Cart (<span id="cart-count">0</span>)
+                    </button>
                 </div>
             </nav>
             <h1>Menu</h1>
@@ -38,39 +44,39 @@
                     <h2>Rice Plates</h2>
                     <table>
                         <tr>
-                            <td>Eggplant with Chicken on Rice</td>
+                            <td><button class="dish-name-btn" data-name="Eggplant with Chicken on Rice" data-price="9.50">Eggplant with Chicken on Rice</button></td>
                             <td>$9.50</td>
                         </tr>
                         <tr>
-                            <td>Braised Bean Curd on Rice</td>
+                            <td><button class="dish-name-btn" data-name="Braised Bean Curd on Rice" data-price="8.50">Braised Bean Curd on Rice</button></td>
                             <td>$8.50</td>
                         </tr>
                         <tr>
-                            <td>Beef with Broccoli on Rice</td>
+                            <td><button class="dish-name-btn" data-name="Beef with Broccoli on Rice" data-price="9.50">Beef with Broccoli on Rice</button></td>
                             <td>$9.50</td>
                         </tr>
                         <tr>
-                            <td>Chop Suey on Rice</td>
+                            <td><button class="dish-name-btn" data-name="Chop Suey on Rice" data-price="9.95">Chop Suey on Rice</button></td>
                             <td>$9.95</td>
                         </tr>
                         <tr>
-                            <td>Beef with Vegetables on Rice</td>
+                            <td><button class="dish-name-btn" data-name="Beef with Vegetables on Rice" data-price="9.50">Beef with Vegetables on Rice</button></td>
                             <td>$9.50</td>
                         </tr>
                         <tr>
-                            <td>Chopped Beef with Beans on Rice</td>
+                            <td><button class="dish-name-btn" data-name="Chopped Beef with Beans on Rice" data-price="9.50">Chopped Beef with Beans on Rice</button></td>
                             <td>$9.50</td>
                         </tr>
                         <tr>
-                            <td>Beef with Bean Curd on Rice</td>
+                            <td><button class="dish-name-btn" data-name="Beef with Bean Curd on Rice" data-price="9.50">Beef with Bean Curd on Rice</button></td>
                             <td>$9.50</td>
                         </tr>
                         <tr>
-                            <td>Squid with Pickled Vegetables on Rice</td>
+                            <td><button class="dish-name-btn" data-name="Squid with Pickled Vegetables on Rice" data-price="9.50">Squid with Pickled Vegetables on Rice</button></td>
                             <td>$9.50</td>
                         </tr>
                         <tr>
-                            <td>Spareribs in Black Bean Sauce on Rice</td>
+                            <td><button class="dish-name-btn" data-name="Spareribs in Black Bean Sauce on Rice" data-price="9.50">Spareribs in Black Bean Sauce on Rice</button></td>
                             <td>$9.50</td>
                         </tr>
                     </table>
@@ -79,45 +85,64 @@
                     <h2>Rice Congee</h2>
                     <table>
                         <tr>
-                            <td>Plain Congee</td>
+                            <td><button class="dish-name-btn" data-name="Plain Congee" data-price="3.95">Plain Congee</button></td>
                             <td>$3.95</td>
                         </tr>
                         <tr>
-                            <td>Pork Stomach Porridge</td>
+                            <td><button class="dish-name-btn" data-name="Pork Stomach Porridge" data-price="7.50">Pork Stomach Porridge</button></td>
                             <td>$7.50</td>
                         </tr>
                         <tr>
-                            <td>Sliced Fish Congee</td>
+                            <td><button class="dish-name-btn" data-name="Sliced Fish Congee" data-price="7.95">Sliced Fish Congee</button></td>
                             <td>$7.95</td>
                         </tr>
                         <tr>
-                            <td>Fishball and Lettuce Porridge</td>
+                            <td><button class="dish-name-btn" data-name="Fishball and Lettuce Porridge" data-price="7.95">Fishball and Lettuce Porridge</button></td>
                             <td>$7.95</td>
                         </tr>
                         <tr>
-                            <td>Sampan Porridge</td>
+                            <td><button class="dish-name-btn" data-name="Sampan Porridge" data-price="7.50">Sampan Porridge</button></td>
                             <td>$7.50</td>
                         </tr>
                         <tr>
-                            <td>Meat Ball Porridge</td>
+                            <td><button class="dish-name-btn" data-name="Meat Ball Porridge" data-price="7.50">Meat Ball Porridge</button></td>
                             <td>$7.50</td>
                         </tr>
                         <tr>
-                            <td>Sliced Fish and Beef Porridge</td>
+                            <td><button class="dish-name-btn" data-name="Sliced Fish and Beef Porridge" data-price="9.25">Sliced Fish and Beef Porridge</button></td>
                             <td>$9.25</td>
                         </tr>
                         <tr>
-                            <td>Sliced Pork and Thousand Egg Porridge</td>
+                            <td><button class="dish-name-btn" data-name="Sliced Pork and Thousand Egg Porridge" data-price="7.50">Sliced Pork and Thousand Egg Porridge</button></td>
                             <td>$7.50</td>
                         </tr>
                         <tr>
-                            <td>Beef Porridge</td>
+                            <td><button class="dish-name-btn" data-name="Beef Porridge" data-price="8.25">Beef Porridge</button></td>
                             <td>$8.25</td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
+
+        <div id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Shopping Cart</h2>
+                <button class="close-cart" onclick="toggleCart()">✕</button>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <p class="empty-cart-message">Your cart is empty</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total:</strong>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+
         <footer>
             <div class="footer-content">
                 <div class="footer-section">
@@ -132,6 +157,7 @@
                 </div>
             </div>
         </footer>
+        <script src="cart.js"></script>
         <script>
             function toggleMobileNav() {
                 const mobileNav = document.getElementById('mobileNav');
