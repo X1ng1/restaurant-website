@@ -107,28 +107,21 @@ function clearCart() {
     if (cart.length === 0) {
         return;
     }
-    
-    if (confirm('Are you sure you want to clear your cart?')) {
-        cart = [];
-        saveCart();
-        updateCartDisplay();
-    }
+    cart = [];
+    saveCart();
+    updateCartDisplay();
 }
 
 // Initialize cart on page load
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Cart script loaded'); // Debug log
     loadCart();
     
-    // Add click event listeners to dish name buttons
     const dishNameButtons = document.querySelectorAll('.dish-name-btn');
-    console.log('Found dish name buttons:', dishNameButtons.length); // Debug log
     
     dishNameButtons.forEach(button => {
         button.addEventListener('click', function() {
             const name = this.getAttribute('data-name');
             const price = this.getAttribute('data-price');
-            console.log('Button clicked:', name, price); // Debug log
             addToCart(name, price);
         });
     });
