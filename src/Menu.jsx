@@ -44,7 +44,18 @@ function Menu() {
   // Save cart to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
+    // Dispatch custom event to update nav cart count
+    window.dispatchEvent(new CustomEvent('cartUpdated'));
   }, [cart]);
+
+  // Handle opening cart from other pages
+  useEffect(() => {
+    const handleOpenCart = () => {
+      setCartActive(true);
+    };
+    window.addEventListener('openCart', handleOpenCart);
+    return () => window.removeEventListener('openCart', handleOpenCart);
+  }, []);
 
   // Handle clicking outside cart
   useEffect(() => {

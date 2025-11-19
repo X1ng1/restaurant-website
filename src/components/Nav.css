@@ -79,13 +79,30 @@ nav div {
   border-radius: 2px;
 }
 
+.mobile-cart-btn {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  padding: 8px 12px;
+  height: 35px;
+  box-sizing: border-box;
+  background-color: rgb(255, 190, 11);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Sour Gummy", sans-serif;
+  margin-right: 10px;
+}
+
 .mobile-nav {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: black !important;
   backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 0 0 15px 15px;
@@ -118,14 +135,6 @@ nav div {
   font-size: 16px;
 }
 
-#mobile-cart-toggle {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-}
-
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
   nav {
@@ -141,6 +150,10 @@ nav div {
   }
 
   .hamburger {
+    display: flex;
+  }
+
+  .mobile-cart-btn {
     display: flex;
   }
 }
