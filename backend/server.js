@@ -14,8 +14,18 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+// Determine allowed CORS origin. If FRONTEND_URL contains a path (e.g.
+// https://username.github.io/repo/), use only the origin (https://username.github.io).
+let allowedOrigin = process.env.FRONTEND_URL || 'http://localhost:5173';
+try {
+    // This will throw if FRONTEND_URL is not a valid URL, so we keep the raw value as a fallback
+    allowedOrigin = new URL(allowedOrigin).origin;
+} catch (e) {
+    // keep allowedOrigin as provided
+}
+
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: allowedOrigin,
     credentials: true
 }));
 app.use(express.json());

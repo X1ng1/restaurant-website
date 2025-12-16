@@ -1,0 +1,22 @@
+# Render service manifest for ny-noodletown-backend
+# Replace <GITHUB_USERNAME> and <REPO_NAME> with your repo information.
+# Render will use this manifest to create/update the Web Service automatically.
+
+services:
+  - type: web
+    name: ny-noodletown-backend
+    env: node
+    repo: https://github.com/<GITHUB_USERNAME>/<REPO_NAME>
+    branch: main
+    plan: free
+    buildCommand: "npm ci"
+    startCommand: "npm start"
+    envVars:
+      - key: ATLAS_URI
+        # Do not set a value here; add via Render console or CLI for security
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: NODE_ENV
+        value: production
+        sync: false
