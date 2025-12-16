@@ -61,6 +61,7 @@ function Nav({ cartCount, onCartToggle }) {
         <Link to="/menu">Menu</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
+        <Link to="/orders">Orders</Link>
       </div>
       <div className="nav-button">
         <Link to="/menu"><button>Order Now</button></Link>
@@ -88,6 +89,7 @@ function Nav({ cartCount, onCartToggle }) {
         <Link to="/menu" onClick={toggleMobileNav}>Menu</Link>
         <Link to="/about" onClick={toggleMobileNav}>About</Link>
         <Link to="/contact" onClick={toggleMobileNav}>Contact</Link>
+        <Link to="/orders" onClick={toggleMobileNav}>Orders</Link>
         <Link to="/menu" onClick={toggleMobileNav}><button>Order Now</button></Link>
       </div>
     </nav>

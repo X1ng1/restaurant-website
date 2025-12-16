@@ -10,6 +10,26 @@ h2 {
   font-size: 30px;
 }
 
+/* Loading and Error Messages */
+.loading-message, .error-message {
+  text-align: center;
+  padding: 30px;
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.loading-message {
+  color: rgb(255, 190, 11);
+}
+
+.error-message {
+  color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+  border-radius: 10px;
+  border: 2px solid #ff4444;
+}
+
 /* Menu */
 .menu-table {
   display: flex;
